@@ -57,6 +57,7 @@ body {
 
 .container-login .title {
     width: 410px;
+    transition: 500ms;
 }
 
 .container-login .title h2 {
@@ -65,15 +66,20 @@ body {
     font-weight: 400;
 }
 
-.login {
+.login,
+.register{
     height: 50%;
     display: flex;
     justify-content: space-evenly;
     align-content: center;
 }
-
+.register{
+    display: none;
+}
 .container .login input,
-.container .login button {
+.container .login button,
+.container .register input,
+.container .register button {
     width: 370px;
     height: 56px;
     border: none;
@@ -81,24 +87,29 @@ body {
 
 }
 
-.container .login button {
+.container .login button,
+.container .register button {
     width: 410px;
     border-radius: 10px;
     cursor: pointer;
     transition: 500ms;
 }
 
-.container .login button:hover {
-    opacity: 0.5;
+.container .login button:hover,
+.container .register button:hover
+{
+    opacity: 0.8;
 }
 
-.login .input-content {
+.login .input-content,
+.register .input-content {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login .input-content .icon {
+.login .input-content .icon,
+.register .input-content .icon {
     width: 40px;
     height: 56px;
     display: flex;
@@ -109,17 +120,20 @@ body {
     border-radius: 10px 0 0 10px;
 }
 
-.container .login input {
+.container .login input,
+.container .register input{
     padding-left: 10px;
     background: rgba(217, 217, 217, 0.40);
     border-radius: 0 10px 10px 0;
 }
 
-.login input::placeholder {
+.login input::placeholder,
+.register input::placeholder{
     color: #0A0A0A;
 }
 
-.login input:focus {
+.login input:focus,
+.register input:focus{
     outline: none;
 }
 
@@ -173,7 +187,36 @@ body {
 .btn-social a:hover {
     opacity: 0.5;
 }
-
+.btn-login{
+    display: none;
+}
+.btn-register,
+.btn-login{
+    color: #c1c1c1;
+}
+.btn-register p span,
+.btn-login p span{
+    font-weight: 600;
+    cursor: pointer;
+}
+.screen-enter-register{
+    animation: enter 1s ease-in-out;
+}
+.screen-enter-login{
+    animation: enter-login 1s ease-in-out;
+}
+@keyframes enter-login {
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+@keyframes enter {
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+}
 @media (max-width:768px) {
     .container .container-login {
         width: 100%;
