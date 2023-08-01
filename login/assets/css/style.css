@@ -228,11 +228,16 @@ body {
         background: rgba(10, 10, 10, 0.5);
         width: 100%;
     }
+    .btn-login,
+    .btn-register{
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width:600px) {
     .container .container-login {
         padding-left: 0;
+        backdrop-filter: none;
     }
 
     .container-login .title {
@@ -245,11 +250,13 @@ body {
         text-align: center;
     }
 
-    .container .login input {
+    .container .login input,
+    .container .register input {
         width: 90%;
     }
 
-    .container .login button {
+    .container .login button,
+    .container .register button {
         width: 100%;
     }
 
