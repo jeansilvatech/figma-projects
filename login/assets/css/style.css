@@ -221,6 +221,7 @@ body {
     .container .container-login {
         width: 100vw;
         height: 100vh;
+        justify-content: center;
         border-radius: 0;
         background: rgba(10, 10, 10, 0.5);
     }
@@ -231,7 +232,10 @@ body {
     }
     .btn-login,
     .btn-register{
-        margin-bottom: 20px;
+        margin: 20px;
+    }
+    .btn-social a {
+        margin-top: 10px;
     }
 }
 
