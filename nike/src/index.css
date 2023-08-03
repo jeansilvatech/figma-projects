@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #fff;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #FFF;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 20px;
+  border: 3px solid #FFF;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  overflow-X: hidden;
+  font-family: 'Inter', sans-serif;
+}
