@@ -1,5 +1,8 @@
 import styled, { keyframes } from 'styled-components'
 
+export const colors ={
+    PRIMARY: "#CEA70A"
+}
 const arrowAnimation = keyframes `
     0%, 100%{
         transform: translateY(0)
@@ -14,7 +17,7 @@ export const HeaderContainer = styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #CEA70A;
+    background-color: ${colors.PRIMARY};
 `
 export const Arrow = styled.div `
     position: absolute;
