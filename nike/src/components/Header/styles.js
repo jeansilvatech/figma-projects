@@ -1,8 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import bg from '../../assets/bg.png'
-export const colors ={
-    PRIMARY: "#CEA70A"
-}
+
 const arrowAnimation = keyframes `
     0%, 100%{
         transform: translateY(0)
@@ -17,13 +14,15 @@ export const HeaderContainer = styled.div `
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(${bg});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: #CEA70A;
 `
 export const Arrow = styled.div `
     position: absolute;
     bottom: 0;
     animation: ${arrowAnimation} 3s ease-in-out infinite;
+`
+export const Logo = styled.img`
+         @media (max-width:600px) {
+                width:280px;    
+        }
 `
